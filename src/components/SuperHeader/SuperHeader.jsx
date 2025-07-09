@@ -8,28 +8,32 @@ import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
 
 const SuperHeader = () => {
-  return (
-    <Wrapper>
-      <MarketingMessage>
-        Free shipping on domestic orders over $75!
-      </MarketingMessage>
-      <SearchInput />
-      <HelpLink href="/help">Help</HelpLink>
-      <UnstyledButton>
-        <Icon id="shopping-bag" strokeWidth={1} />
-      </UnstyledButton>
-    </Wrapper>
-  );
+    return (
+        <Wrapper>
+            <MarketingMessage>
+                Free shipping on domestic orders over $75!
+            </MarketingMessage>
+            <SearchInput />
+            <HelpLink href="/help">Help</HelpLink>
+            <UnstyledButton>
+                <Icon id="shopping-bag" strokeWidth={1} />
+            </UnstyledButton>
+        </Wrapper>
+    );
 };
 
 const Wrapper = styled.div`
   font-size: 0.875rem;
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
+display: flex;
+padding: 4px 8px;
+gap: 16px;
 `;
 
 const MarketingMessage = styled.span`
   color: ${COLORS.white};
+margin-right: auto;
 `;
 
 const HelpLink = styled.a`

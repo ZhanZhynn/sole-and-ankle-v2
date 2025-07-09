@@ -5,16 +5,17 @@ import Header from '../Header';
 import ShoeIndex from '../ShoeIndex';
 
 const App = () => {
-  const [sortId, setSortId] = React.useState('newest');
+    const [sortId, setSortId] = React.useState('newest');
 
-  return (
-    <>
-      <Header />
-      <Main>
-        <ShoeIndex sortId={sortId} setSortId={setSortId} />
-      </Main>
-    </>
-  );
+    return (
+        <>
+            <Header />
+            <Main>
+                <ShoeIndex sortId={sortId} setSortId={setSortId} />
+                {sortId}
+            </Main>
+        </>
+    );
 };
 
 const Main = styled.main`

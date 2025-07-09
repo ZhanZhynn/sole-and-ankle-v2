@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import SHOES from '../../data';
 import ShoeCard from '../ShoeCard';
 
-const ShoeGrid = ({ sortBy }) => {
+const ShoeGrid = (sortId) => {
     const shoeSorted = () => {
-        if (sortBy === "price") {
+        if (sortId === "price") {
             return SHOES.slice().sort((a, b) => a.price - b.price);
         }
         return SHOES.slice().sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
